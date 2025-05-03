@@ -1,0 +1,47 @@
+.home-root {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 32px rgba(255, 105, 180, 0.13);
+    padding: 32px 18px 38px 18px;
+  }
+  
+  .home-title {
+    color: #ff69b4;
+    letter-spacing: 0.03em;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  .algo-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 26px;
+  }
+  
+  .algo-toggle button {
+    background: #fff5f9;
+    border: 2px solid #ff69b4;
+    color: #ff69b4;
+    border-radius: 20px;
+    padding: 10px 32px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .algo-toggle button.active,
+  .algo-toggle button:hover {
+    background: #ff69b4;
+    color: #fff;
+  }
+  
+  .algo-demo {
+    margin-top: 22px;
+  }
+  

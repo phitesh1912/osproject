@@ -1,0 +1,121 @@
+.about-root {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.about-root h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #2d3748;
+  text-align: center;
+}
+
+.about-root h2 {
+  font-size: 1.5rem;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  color: #4a5568;
+}
+
+.about-root p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.about-root ul {
+  padding-left: 24px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.about-team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.about-card {
+  background: #f7fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  min-width: 260px;
+  max-width: 320px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.about-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  transform: translateY(-3px);
+}
+
+.profile-picture {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 2px solid #e2e8f0;
+  background: #e2e8f0;
+}
+
+.person-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.person-name {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #2b6cb0;
+  margin-bottom: 4px;
+}
+
+.person-role {
+  font-size: 0.98rem;
+  color: #718096;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-root {
+    margin: 20px auto;
+    padding: 24px 16px;
+  }
+  
+  .about-root h1 {
+    font-size: 2rem;
+  }
+  
+  .about-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about-card {
+    min-width: 220px;
+  }
+}

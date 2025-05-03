@@ -1,0 +1,8 @@
+/* Center the entire page content both vertically and horizontally */
+body, #root, .app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

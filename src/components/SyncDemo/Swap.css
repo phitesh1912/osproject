@@ -1,0 +1,32 @@
+.swap-root {
+    text-align: center;
+  }
+  
+  .swap-status {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #ff69b4;
+  }
+  
+  .swap-btn {
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 22px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: 16px;
+    transition: background 0.2s;
+  }
+  
+  .swap-btn:hover {
+    background: #ff1493;
+  }
+  
+  .swap-output {
+    margin-top: 12px;
+    color: #d63384;
+    min-height: 24px;
+  }
+  

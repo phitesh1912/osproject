@@ -1,0 +1,259 @@
+.swap-root {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.lock-status {
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.swap-visual-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px 0 24px 0;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 24px;
+  background: #f9f9f9;
+  transition: border-color 0.3s, background 0.3s;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.lock-circle.locked {
+  border-color: #e74c3c;
+  background: #ffeaea;
+}
+
+.lock-circle.unlocked {
+  border-color: #2ecc40;
+  background: #eaffea;
+}
+
+.key-circle.has-key {
+  border-color: #3498db;
+  background: #eaf4ff;
+}
+
+.key-circle.no-key {
+  border-color: #aaa;
+  background: #f0f0f0;
+}
+
+.circle-label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.circle-value {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.lock-symbol-container {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-symbol {
+  font-size: 2.5rem;
+  transition: color 0.3s;
+}
+
+.lock-symbol.locked {
+  color: #e74c3c;
+}
+
+.lock-symbol.unlocked {
+  color: #2ecc40;
+}
+
+.swapping {
+  animation: swapPulse 0.8s;
+}
+
+@keyframes swapPulse {
+  0% { box-shadow: 0 0 0 0 rgba(52,152,219,0.3); }
+  50% { box-shadow: 0 0 16px 8px rgba(52,152,219,0.15); }
+  100% { box-shadow: 0 0 0 0 rgba(52,152,219,0.0); }
+}
+
+.swap-animation {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.swap-animation.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.swap-animation.hide {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.swap-box {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+  cursor: default;
+  user-select: none;
+  transition: transform 0.5s ease;
+}
+
+.swap-box.lock-box {
+  background-color: #e74c3c;
+}
+
+.swap-box.key-box {
+  background-color: #3498db;
+}
+
+.swap-animation.show .swap-box.lock-box {
+  animation: moveRight 1s ease forwards;
+}
+
+.swap-animation.show .swap-box.key-box {
+  animation: moveLeft 1s ease forwards;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-lock {
+  animation: pulse-lock 1s ease;
+}
+
+.animate-key {
+  animation: pulse-key 1s ease;
+}
+
+@keyframes pulse-lock {
+  0% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 10px 10px rgba(231, 76, 60, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+  }
+}
+
+@keyframes pulse-key {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 10px 10px rgba(52, 152, 219, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.buttons button {
+  padding: 10px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 10px;
+}
+
+.buttons button:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+.buttons button:not(:disabled):hover {
+  background-color: #2980b9;
+  color: white;
+}
+
+.log {
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-top: 18px;
+  min-height: 80px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.log ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.log li {
+  margin-bottom: 5px;
+  opacity: 0;
+  animation: fadeInLog 0.5s forwards;
+  font-size: 1rem;
+  color: #444;
+}
+
+@keyframes fadeInLog {
+  to {
+    opacity: 1;
+  }
+}
