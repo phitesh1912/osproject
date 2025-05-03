@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/phitesh1912/osproject",
+  "homepage": "https://phitesh1912.github.io/osproject",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
