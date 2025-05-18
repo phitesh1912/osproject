@@ -28,17 +28,6 @@ export default function About() {
         <div className="about-card">
           <img
             className="profile-picture"
-            src="/images/abhijna.jpg"
-            alt="abhijna"
-          />
-          <div className="person-details">
-            <div className="person-name">Abhijna S P</div>
-            <div className="person-role">Team Member</div>
-          </div>
-        </div>
-        <div className="about-card">
-          <img
-            className="profile-picture"
             src="/images/hitesh.jpg"
             alt="hitesh"
           />
